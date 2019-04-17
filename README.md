@@ -1,6 +1,6 @@
 # Ng7App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8. You can check the live demo site at http://dingnan.azurewebsites.net/
 
 ## Development server
 
