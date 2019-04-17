@@ -11,6 +11,9 @@ import { ProductComponent } from './component/store/product/product.component';
 import { ProductDetailComponent } from './component/store/product-detail/product-detail.component';
 import { ShoppingCartComponent } from './component/store/shopping-cart/shopping-cart.component';
 import { OrderSummaryComponent } from './component/store/order-summary/order-summary.component';
+import { ProductListService } from './service/product-list.service';
+import { ProductDetailService } from './service/product-detail.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -26,9 +29,10 @@ import { OrderSummaryComponent } from './component/store/order-summary/order-sum
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ProductListService, ProductDetailService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

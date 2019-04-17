@@ -1,3 +1,63 @@
-<p>
-  demo-store works!
-</p>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-3">
+            <h2>Demo Store</h2>
+        </div>
+        <div class="col-lg-9">
+            <div class="message approved">
+                <p>I have used <a href="https://github.com/angular/angular">Angular 7</a>, <a href="http://getbootstrap.com">Bootstrap</a> on this page.</p>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <hr/>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12" style="min-height: 100px;">
+            <div class="row">
+                  <div class="col-md-3 col-md-offset-2">
+                      <b>{{orders.length}}</b><span> items in shopping cart.</span>                            
+                  </div>
+                  <div class="col-md-2">                            
+                      <a routerLink="shoppingCart" class="btn btn-primary" [class.disabled]="!orders.length"><span>Proceed to checkout</span><i class="glyphicon glyphicon-shopping-cart" style="margin-left: 5px"></i></a>
+                  </div>
+              </div>
+            <div class="row">
+              <div class="col-lg-12">
+                <hr/>
+              </div>
+            </div>
+        </div>
+        <div class="col-lg-12">
+            <div class="row">
+              <div class="col-md-2" *ngFor="let product of products.slice(0, 4)">
+                <product [data]="product"></product>
+                <div class="cart">
+                  <img src="/assets/images/add-to-cart.png" (click)="addToCart(product);"/>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-12">
+                <hr/>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-2" *ngFor="let product of products.slice(4, 8)">
+                <product [data]="product"></product>
+                <div class="cart">
+                  <img src="/assets/images/add-to-cart.png" (click)="addToCart(product);"/>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+                  <div class="col-lg-12">
+                      <hr/>
+                  </div>
+            </div>
+        </div>            
+  
+    </div>
+  </div>
